@@ -1,0 +1,58 @@
+doctype html
+|
+|
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css")
+        link(rel='stylesheet', href='./../styles/dist/styles.css')
+        title Document
+    body 
+        h4(class='app-title') Password Generator
+        div(class='app-container')
+            div(class='generated-password-container')
+                div(class='generated-password-wrapper')
+                    |
+                    |
+                    span(class='generated-pasword') Test 
+                    button(class='copy-button')
+                        |
+                        |
+                        i(class='bi bi-back')
+            div(class='generation-setup-container')
+                div(class='generation-setup-wrapper')
+                    div(class='generation-password-length-container')
+                        div(class='generation-password-text-container')
+                            |
+                            |
+                            span(class='password-length-text') Character length
+                            |
+                            |
+                            span(class='password-length-number') 10
+                        input(class='password-length-range', type='range', min='1', max='25', value='10', list='length')
+                        datalist(id='length')
+                            -let startLength = 0;
+                            while startLength++ < 25
+                                option(value=startLength, label=startLength) 
+                    div(class='extra-setup-container')
+                        -const values = ["Include uppercase letters", "include lowercase letters", "include numbers", "include symbols"]
+                        each val, index in values
+                            label(class=['extra-setup', 'setup-' + (index + 1)])=val
+                                input(type="checkbox", checked = 'true', class='extra-setup-choose-button') 
+                                div(class='custom-checkbox') &check;
+                    div(class='strength-container')
+                        |
+                        |
+                        span(class='strength-text') strength
+                        div(class='strength-data-container')
+                            |
+                            |
+                            span(class='strength-data-text') Hard
+                            -let n = 0
+                            while n++ < 4
+                                div(class=['strength-bar', 'bar-' + n, 'hard'])
+                    button(class='generate-button') Generate 
+                        i(class='bi bi-arrow-right')
+                

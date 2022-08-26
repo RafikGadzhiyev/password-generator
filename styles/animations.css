@@ -1,0 +1,5 @@
+@keyframes moveRight {
+    70%, 80%, 90%, 100%{
+        transform: translateY(2px) translateX(7.5px);
+    }
+}
