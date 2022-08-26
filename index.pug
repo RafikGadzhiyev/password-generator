@@ -16,7 +16,7 @@ html(lang="en")
                 div(class='generated-password-wrapper')
                     |
                     |
-                    span(class='generated-pasword') Test 
+                    span(class='generated-password') 
                     button(class='copy-button')
                         |
                         |
@@ -40,7 +40,7 @@ html(lang="en")
                         -const values = ["Include uppercase letters", "include lowercase letters", "include numbers", "include symbols"]
                         each val, index in values
                             label(class=['extra-setup', 'setup-' + (index + 1)])=val
-                                input(type="checkbox", checked = 'true', class='extra-setup-choose-button') 
+                                input(type="checkbox", checked = 'true', class=['extra-setup-choose-button', 'choose-button-' + (index + 1)]) 
                                 div(class='custom-checkbox') &check;
                     div(class='strength-container')
                         |
@@ -55,4 +55,4 @@ html(lang="en")
                                 div(class=['strength-bar', 'bar-' + n, 'hard'])
                     button(class='generate-button') Generate 
                         i(class='bi bi-arrow-right')
-                
+        script(src='./../scripts/main.js')          

@@ -174,13 +174,13 @@ button {
   background-color: red;
 }
 .strength-bar.easy {
-  background-color: #ff6c6c;
+  background-color: rgb(255, 108, 108);
 }
 .strength-bar.medium {
   background-color: #CCB17B;
 }
 .strength-bar.hard {
-  background-color: #5fff5f;
+  background-color: rgb(95, 255, 95);
 }
 .strength-bar.empty {
   outline: 1px solid white;
@@ -204,12 +204,14 @@ button {
 }
 .generate-button > i {
   transform: translateY(2px);
-  animation: moveRight 0.5s linear infinite alternate;
+  -webkit-animation: moveRight 0.5s linear infinite alternate;
+          animation: moveRight 0.5s linear infinite alternate;
 }
 .generate-button:hover {
   background-color: transparent;
   color: white;
 }
 .generate-button:hover > i {
-  animation-play-state: paused;
-}
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}/*# sourceMappingURL=styles.css.map */

@@ -68,7 +68,7 @@ button {
     background: white;
     border-radius: 5px;
     background-image: linear-gradient(#107f1d, #a4ffaf);
-    background-size: 70% 100%;
+    background-size: 40% 100%;
     background-repeat: no-repeat;
 
     &::-webkit-slider-thumb {
@@ -169,6 +169,10 @@ button {
     gap: .5rem;
 }
 
+.strength-data-text {
+    text-transform: capitalize;
+}
+
 .strength-bar {
     width: 7px;
     height: 1.2rem;
@@ -189,7 +193,7 @@ button {
         background-color: rgb(95, 255, 95);
     }
 
-    &.emptry {
+    &.empty {
         outline: 1px solid white
     }
 
